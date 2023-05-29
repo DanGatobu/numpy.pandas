@@ -1,0 +1,25 @@
+{%extends 'base.html'%}
+{%block title%} 2020 {%endblock%}
+{%block body%}
+    <div>
+        <table class="table">
+          
+            <tr> 
+                <th  scope="col">Year</th>
+                <th  scope="col">State</th>
+                <th  scope="col">Month</th>
+                <th  scope="col">Number</th>
+                <th  scope="col">Date</th>
+            </tr>
+            {%for values in data.itertuples()%}
+            <tr>
+               <td scope="row"> {{values[1]}}</td>
+               <td scope="row"> {{values[0]}}</td>
+               <td scope="row"> {{values[3]}}</td>
+               <td scope="row"> {{values[4]}}</td>
+               <td scope="row"> {{values[5]}}</td>
+                {%endfor%}
+            </tr>
+        </table>
+    </div>
+{%endblock%}

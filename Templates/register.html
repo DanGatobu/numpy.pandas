@@ -1,0 +1,17 @@
+{%extends 'base.html'%}
+{%block title%} register {%endblock%}
+{%block body%}
+    <form method="post" action="{{url_for('register')}}">
+      <div >
+      {{ form.csrf_token}}
+      <div  class="form-control">{{form.Username.label}}</div>
+      <div class="form-control">{{form.Username}}</div>
+      <br>
+      <div  class="form-control">{{form.password.label}}</div>
+      <div  class="form-control">{{form.password}}</div>
+      <div  class="form-control">{{form.submit}}</div>
+      </div>
+      </form>
+      <p><strong>Already have an account?</strong></p>
+      <p><strong><a href="{{url_for('login')}}">login</a></strong></p>
+{%endblock%}

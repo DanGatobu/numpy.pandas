@@ -1,0 +1,26 @@
+{%extends 'base.html'%}
+{%block title%} 2018 {%endblock%}
+{%block body%}
+    <table class="table">
+        <tr> 
+            <th scope="col">Datetime</th>
+            <th scope="col">Open</th>
+            <th scope="col">High</th>
+            <th scope="col">low</th>
+            <th scope="col">Close</th>
+            <th scope="col">Volume</th>
+        </tr>
+        
+        {%for values in Her.itertuples()%}
+        <tr>
+           <td scope="row"> {{values[1]}}</td>
+           <td scope="row"> {{values[2]}}</td>
+           <td scope="row"> {{values[3]}}</td>
+           <td scope="row"> {{values[4]}}</td>
+           <td scope="row"> {{values[5]}}</td>
+           <td scope="row"> {{values[6]}}</td>
+        
+        </tr>
+        {%endfor%}
+    </table>
+{%endblock%}
